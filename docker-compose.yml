@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+ php:
+   build: ./docker
+   ports:
+   - 8081:80
+   volumes:
+   - ./src:/var/www/html
+   - ./docker/php.ini:/usr/local/etc/php/php.ini
+   container_name: php7.4-test
+   extra_hosts:
+   - "host.docker.internal:host-gateway"

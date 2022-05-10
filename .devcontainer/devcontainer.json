@@ -1,0 +1,17 @@
+{
+	"name": "php7.4", //コンテナ表示名
+	"dockerComposeFile": [
+		"../docker-compose.yml" //docker-compose.ymlのファイルパス
+	],
+	"service": "php", //docker-composeの接続サービス名
+    //"remoteUser": "miyagi3007", //デフォルトユーザーをrootから切り替え
+	"workspaceFolder": "/var/www/html", //ワークスペースのフォルダ指定
+	"settings": { //コンテナ内のVSコードの設定
+        "editor.fontSize": 16, //フォント
+		"editor.tabSize": 4 //タブスペース
+	},
+	"extensions": [
+		"bmewburn.vscode-intelephense-client",
+		"xdebug.php-debug"
+	]
+}
