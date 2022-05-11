@@ -3,10 +3,11 @@ services:
  php:
    build: ./docker
    ports:
-   - 8081:80
+   - 80:80
    volumes:
    - ./src:/var/www/html
    - ./docker/php.ini:/usr/local/etc/php/php.ini
+   - ./docker/000-default.conf:/etc/apache2/sites-available/000-default.conf
    container_name: php7.4-test
    extra_hosts:
    - "host.docker.internal:host-gateway"
